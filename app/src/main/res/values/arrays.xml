@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="items">
+        <item>番号01</item>
+        <item>番号02</item>
+        <item>番号03</item>
+        <item>番号04</item>
+        <item>番号05</item>
+        <item>番号06</item>
+        <item>番号07</item>
+        <item>番号08</item>
+        <item>番号09</item>
+        <item>番号10</item>
+    </string-array>
+
+
+</resources>

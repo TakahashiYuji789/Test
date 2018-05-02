@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModeSelect" >
+
+
+    <TextView
+        android:id="@+id/SelectText"
+        android:layout_width="321dp"
+        android:layout_height="59dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="対戦形式選択"
+        android:textSize="30sp" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="268dp"
+        android:layout_height="58dp"
+        android:layout_alignTop="@+id/BarNumber"
+        android:max="10"
+        android:progress="0" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="251dp"
+        android:layout_height="36dp"
+        android:layout_alignEnd="@+id/GameButton"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="119dp"
+        android:max="10"
+        android:progress="0" />
+
+    <Button
+        android:id="@+id/GameButton"
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="44dp"
+        android:onClick="onClickGame"
+        android:text="ゲームスタート"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/BarNumber"
+        android:layout_width="102dp"
+        android:layout_height="43dp"
+        android:layout_alignEnd="@+id/GameButton"
+        android:layout_below="@+id/BattleMode"
+        android:text="TextView"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/BattleMode"
+        android:layout_width="133dp"
+        android:layout_height="39dp"
+        android:layout_alignTop="@+id/seekBar2"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/Rule"
+        android:layout_width="387dp"
+        android:layout_height="182dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="143dp"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="92dp"
+        android:layout_height="52dp"
+        android:layout_below="@+id/seekBar"
+        android:text="ルール"
+        android:textSize="30sp" />
+
+</RelativeLayout>

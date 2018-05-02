@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MiddleResult" >
+
+
+    <TextView
+        android:id="@+id/Title02"
+        android:layout_width="342dp"
+        android:layout_height="78dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="途中経過......."
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/BattleNum"
+        android:layout_width="342dp"
+        android:layout_height="78dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="138dp"
+        android:gravity="center"
+        android:text="何戦目Xだよ"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/WinCount00"
+        android:layout_width="256dp"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/Title02"
+        android:layout_marginTop="252dp"
+        android:text="勝った数：X"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/DrawCount00"
+        android:layout_width="256dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/Title02"
+        android:layout_marginBottom="148dp"
+        android:text="引き分け数：X"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/LoseCount00"
+        android:layout_width="256dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/Title02"
+        android:layout_marginBottom="226dp"
+        android:text="負けた数：X"
+        android:textSize="36sp" />
+
+    <Button
+        android:id="@+id/FightButton"
+        android:layout_width="356dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="54dp"
+        android:onClick="onBattleScene"
+        android:text="次の対戦へ"
+        android:textSize="24sp" />
+</RelativeLayout>
