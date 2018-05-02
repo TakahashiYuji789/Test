@@ -42,6 +42,7 @@ public class MainActivity02 extends AppCompatActivity {
             Intent intent = new Intent(this,MiddleResult.class);
             startActivity(intent);
     }
+        finish();
     }
     public void  EnemyHandImage(){
         //ランダム作成

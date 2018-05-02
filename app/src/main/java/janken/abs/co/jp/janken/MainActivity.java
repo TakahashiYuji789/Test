@@ -24,15 +24,19 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,MainActivity02.class);
         intent.putExtra("PlayerHand",0);
         startActivity(intent);
+        finish();
     }
+
     public void onButtonChoki(View view){
         Intent intent = new Intent(this,MainActivity02.class);
         intent.putExtra("PlayerHand",1);
         startActivity(intent);
+        finish();
     }
     public void onButtonPa(View view){
         Intent intent = new Intent(this,MainActivity02.class);
         intent.putExtra("PlayerHand",2);
         startActivity(intent);
+        finish();
     }
 }

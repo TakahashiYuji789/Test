@@ -54,6 +54,7 @@ public class Result extends AppCompatActivity {
     public void onButtonTitle(View view){
         Intent intent = new Intent(this,Title.class);
         startActivity(intent);
+        finish();
     }
     public void   SaveResult(){
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);

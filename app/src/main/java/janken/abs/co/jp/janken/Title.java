@@ -41,6 +41,7 @@ public class Title extends AppCompatActivity {
     public void onClickStart(View veiw) {
         Intent intent = new Intent(this, ModeSelect.class);
         startActivity(intent);
+        finish();
     }
 
     public void OnClickReset(View view){

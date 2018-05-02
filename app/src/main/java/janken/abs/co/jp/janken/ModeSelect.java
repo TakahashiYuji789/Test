@@ -90,6 +90,7 @@ public class ModeSelect extends AppCompatActivity {
         if(battleNum_>10) new NumberContainer().setBattleNumber_(10);
         else new NumberContainer().setBattleNumber_(battleNum_);
         startActivity(intent);
+        finish();
     }
     public  void SaveResult(){
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
