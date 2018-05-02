@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
             int num = container.getCountBattle_() +1;
             title.setText("第"+num+"戦目 じゃーんけーん......");
         }
-
     }
 
     public void onButtonGu(View view){

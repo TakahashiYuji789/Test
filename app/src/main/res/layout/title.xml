@@ -63,6 +63,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="101dp"
+        android:onClick="OnClickReset"
         android:text="Reset Button" />
 
 </RelativeLayout>

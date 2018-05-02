@@ -58,9 +58,10 @@ public class Result extends AppCompatActivity {
     public void   SaveResult(){
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = pref.edit();
-        editor.putInt("Win",container.getWinNumber_());
-        editor.putInt("Lose",container.getLoseNumber_());
-        editor.putInt("Draw",container.getDrawNumber_());
+        editor.putInt("Win",pref.getInt("TWin",0)+container.getWinNumber_());
+        editor.putInt("Lose",pref.getInt("TLose",0)+container.getLoseNumber_());
+        editor.putInt("Draw",pref.getInt("TDraw",0)+container.getDrawNumber_());
+        editor.apply();
         editor.commit();
 
     }

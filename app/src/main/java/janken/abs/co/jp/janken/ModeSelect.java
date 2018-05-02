@@ -1,7 +1,9 @@
 package janken.abs.co.jp.janken;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
+import android.preference.PreferenceManager;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,6 +24,7 @@ public class ModeSelect extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.select);
 
+        SaveResult();
         textView_ = findViewById(R.id.BarNumber);
         final TextView battleMode_ = findViewById(R.id.BattleMode);
         battleNum_ = 1;
@@ -88,7 +91,15 @@ public class ModeSelect extends AppCompatActivity {
         else new NumberContainer().setBattleNumber_(battleNum_);
         startActivity(intent);
     }
-
+    public  void SaveResult(){
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putInt("TWin",pref.getInt("Win",0));
+        editor.putInt("TLose",pref.getInt("Lose",0));
+        editor.putInt("TDraw",pref.getInt("Draw",0));
+        editor.apply();
+        editor.commit();
+    }
 
 }
 

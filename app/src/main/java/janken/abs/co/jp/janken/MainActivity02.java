@@ -2,6 +2,7 @@ package janken.abs.co.jp.janken;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.TextureView;
@@ -31,12 +32,10 @@ public class MainActivity02 extends AppCompatActivity {
         EnemyHandImage();
         PlayerHandImage();
         Result();
-
     }
     public void onClick(View view){
         if((container_.battleOver())||(container_.battleType_&&container_.CountedOver())){
             Intent intent = new Intent(this,Result.class);
-            container_.playerNum[container_.getCountBattle_()]=playernum_;
             startActivity(intent);
         }
         else{
@@ -115,10 +114,5 @@ public class MainActivity02 extends AppCompatActivity {
             container_.setLoseNumber_(1);
         }
     }
-    public  void SaveResult(String name,int num){
-        SharedPreferences sp = getSharedPreferences("person", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sp.edit();
-        editor.putString("name", name);
-        editor.putInt("age", 1);
-    }
+
 }
