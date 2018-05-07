@@ -18,12 +18,12 @@ import android.widget.ToggleButton;
 public class ModeSelect extends AppCompatActivity {
     private TextView textView_;
     private int battleNum_;
-
+    boolean stopper_;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.select);
-
+        stopper_ = true;
         SaveResult();
         textView_ = findViewById(R.id.BarNumber);
         final TextView battleMode_ = findViewById(R.id.BattleMode);
@@ -87,8 +87,9 @@ public class ModeSelect extends AppCompatActivity {
         });    }
     public void  onClickGame(View veiw){
         Intent intent = new Intent(this,MainActivity.class);
-        if(battleNum_>10) new NumberContainer().setBattleNumber_(10);
-        else new NumberContainer().setBattleNumber_(battleNum_);
+        if(!stopper_){return;}
+            new NumberContainer().setBattleNumber_(battleNum_);
+        stopper_ = false;
         startActivity(intent);
         finish();
     }
