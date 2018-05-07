@@ -22,12 +22,13 @@ public class Result extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.result_scene);
 
+        //勝った数を取得
         TextView winNum = findViewById(R.id.WinCount01);
         winNum.setText("勝った数:"+container.getWinNumber_());
-
+        //負けた数を取得
         TextView loseNum = findViewById(R.id.LoseCount01);
         loseNum.setText("負けた数:"+container.getLoseNumber_());
-
+        //引き分け数を取得
         TextView drawNum = findViewById(R.id.DrawCount01);
         drawNum.setText("引き分け数:"+container.getDrawNumber_());
 
@@ -35,6 +36,7 @@ public class Result extends AppCompatActivity {
         SaveResult();
     }
 
+        //じゃんけんの結果
     public  void Result() {
         winNum_ = container.getWinNumber_();
         loseNum_ = container.getLoseNumber_();
@@ -56,6 +58,7 @@ public class Result extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+        //値を保存
     public void   SaveResult(){
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = pref.edit();

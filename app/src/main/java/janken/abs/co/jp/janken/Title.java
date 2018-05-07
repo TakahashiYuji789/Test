@@ -44,6 +44,7 @@ public class Title extends AppCompatActivity {
         finish();
     }
 
+    //保存した値をリセット
     public void OnClickReset(View view){
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = preferences.edit();

@@ -85,6 +85,7 @@ public class ModeSelect extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });    }
+
     public void  onClickGame(View veiw){
         Intent intent = new Intent(this,MainActivity.class);
         if(!stopper_){return;}

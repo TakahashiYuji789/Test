@@ -44,6 +44,7 @@ public class MainActivity02 extends AppCompatActivity {
     }
         finish();
     }
+    //敵の手の画像変更
     public void  EnemyHandImage(){
         //ランダム作成
         long seed = System.currentTimeMillis();
@@ -64,6 +65,7 @@ public class MainActivity02 extends AppCompatActivity {
             enemyNumber = 2;
             break;}
     }
+    //プレイヤーの手の画像変更
     public  void  PlayerHandImage(){
         ImageView playerhand = findViewById(R.id.PlayerHand);
         switch (playernum_){
@@ -81,6 +83,8 @@ public class MainActivity02 extends AppCompatActivity {
             break;
         }
     }
+
+    //結果処理
     public  void Result(){
         TextView result = findViewById(R.id.Result);
         ImageView comaSan = findViewById(R.id.Coma);

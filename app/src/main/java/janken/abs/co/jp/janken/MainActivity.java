@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //対戦数を表示
         if(container.getCountBattle_()>=1){
             TextView title = findViewById(R.id.JankenTitle);
             int num = container.getCountBattle_() +1;
