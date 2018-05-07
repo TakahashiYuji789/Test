@@ -84,7 +84,7 @@ public class MainActivity02 extends AppCompatActivity {
         }
     }
 
-    //結果処理
+    //勝敗結果
     public  void Result(){
         TextView result = findViewById(R.id.Result);
         ImageView comaSan = findViewById(R.id.Coma);

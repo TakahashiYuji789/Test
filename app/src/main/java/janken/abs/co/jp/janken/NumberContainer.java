@@ -41,11 +41,7 @@ public class NumberContainer {
     public  int getCountBattle_(){
         return  countBattle_;
     }
-    //対戦数をゲット
-    public int getBattleNumber_() {
-        return battleNumber_;
-    }
-    //勝った数を取得
+     //勝った数を取得
     public int getWinNumber_() {
         return winNumber_;
     }

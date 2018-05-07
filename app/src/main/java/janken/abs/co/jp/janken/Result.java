@@ -36,7 +36,7 @@ public class Result extends AppCompatActivity {
         SaveResult();
     }
 
-        //じゃんけんの結果
+        //勝敗結果
     public  void Result() {
         winNum_ = container.getWinNumber_();
         loseNum_ = container.getLoseNumber_();
