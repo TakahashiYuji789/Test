@@ -49,12 +49,10 @@ public class MainActivity02 extends AppCompatActivity {
     public void onClick(View view){
         if((container_.battleOver())||(container_.battleType_&&container_.CountedOver())){
             Intent intent = new Intent(this,Result.class);
-            startActivity(intent);
-        }
+            startActivity(intent); }
         else{
             Intent intent = new Intent(this,MiddleResult.class);
-            startActivity(intent);
-    }
+            startActivity(intent); }
         finish();
     }
 
@@ -101,12 +99,10 @@ public class MainActivity02 extends AppCompatActivity {
           if(playernum_<enemynum_){
             result.setText("勝ち");
             comaSan.setImageResource(R.drawable.win);
-              container_.setWinNumber_(1);
-          }
+              container_.setWinNumber_(1); }
         else{
             result.setText("負け");
             comaSan.setImageResource(R.drawable.lose);
-            container_.setLoseNumber_(1);
-        }
+            container_.setLoseNumber_(1); }
     }
 }

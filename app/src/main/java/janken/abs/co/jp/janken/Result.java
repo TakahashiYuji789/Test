@@ -44,12 +44,11 @@ public class Result extends AppCompatActivity {
         ImageView image_ = findViewById(R.id.ResultImage);
         if (winNum_ > loseNum_ && winNum_>=drawNum_) {
             image_.setImageResource(R.drawable.youwin);
-
-        } else if (loseNum_ > winNum_ && loseNum_>=drawNum_) {
-            image_.setImageResource(R.drawable.youlose);
-        } else {
-            image_.setImageResource(R.drawable.draw_maked);
         }
+        else if (loseNum_ > winNum_ && loseNum_>=drawNum_) {
+            image_.setImageResource(R.drawable.youlose); }
+        else {
+            image_.setImageResource(R.drawable.draw_maked); }
     }
 
     public void onButtonTitle(View view){
@@ -61,6 +60,7 @@ public class Result extends AppCompatActivity {
     public void   SaveResult(){
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = pref.edit();
+        //前回の結果と今回の結果を合計する
         editor.putInt("Win",pref.getInt("TWin",0)+container.getWinNumber_());
         editor.putInt("Lose",pref.getInt("TLose",0)+container.getLoseNumber_());
         editor.putInt("Draw",pref.getInt("TDraw",0)+container.getDrawNumber_());

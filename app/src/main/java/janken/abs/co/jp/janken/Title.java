@@ -23,7 +23,7 @@ public class Title extends AppCompatActivity {
     int winNum_ ;
     int loseNum_;
     int drawNum_;
-    @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.title);
@@ -32,7 +32,6 @@ public class Title extends AppCompatActivity {
         winNum_ = preferences.getInt("Win",0);
         loseNum_= preferences.getInt("Lose",0);
         drawNum_= preferences.getInt("Draw",0);
-
 
         TextView battleRecord = findViewById(R.id.BattleHisCom);
          battleRecord.setText(winNum_+"勝ち"+loseNum_+"負け"+drawNum_+"引き分け");
@@ -52,10 +51,6 @@ public class Title extends AppCompatActivity {
                 Intent intent = new Intent(this, ModeSelect.class);
                 startActivity(intent);
                 finish();
-                break;
-        }
-      }
-      }
-
-
-
+                break; }
+    }
+}

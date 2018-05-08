@@ -45,20 +45,16 @@ public class ModeSelect extends AppCompatActivity {
         //初期値
         seekBar2.setProgress(0);
         seekBar2.setMax(1);
-
+        //シークバーリスナー
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 battleNum_ = progress+1;
-                textView_.setText("回数："+battleNum_);
-            }
+                textView_.setText("回数："+battleNum_); }
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-            }
+            public void onStartTrackingTouch(SeekBar seekBar) {}//押された時に呼ばれる
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-            }
-        });
+            public void onStopTrackingTouch(SeekBar seekBar) {}});//押され終わった時に呼ばれる
         seekBar2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -67,27 +63,28 @@ public class ModeSelect extends AppCompatActivity {
                 ruleStruct.setText("1.対戦形式は任意で1～10まで対戦出来ます\n2.対戦は勝敗問わずカウントします\n3.設定した値まで終了しません\n4.結果は総合的に判定します");
                     new NumberContainer().battleType_ = false;
                 }
-                else
-                {
+                else{
                     battleMode_.setText("星取り戦");
                     ruleStruct.setText("1.対戦形式は任意で1～10まで対戦出来ます\n2.設定した回戦数の半分以上を満たした場合終了します\n3.設定した回数を達した場合終了します\n4.結果は総合的に判定します");
                     new NumberContainer().battleType_ = true;
-               }
-            }
+               } }
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {}
+            public void onStartTrackingTouch(SeekBar seekBar) {}//押された時に呼ばれる
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}});
+            public void onStopTrackingTouch(SeekBar seekBar) {}});//押され終わった時に呼ばれる
     }
 
+    //ゲーム開始ボタン
     public void  onClickGame(View veiw){
         Intent intent = new Intent(this,MainActivity.class);
-        if(!stopper_){return;}
+        if(!stopper_){return;}//二度押し防止機能
             new NumberContainer().setBattleNumber_(battleNum_);
         stopper_ = false;
         startActivity(intent);
         finish();
     }
+
+    //累計成績の表示の一時的な保管
     public  void SaveResult(){
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = pref.edit();
