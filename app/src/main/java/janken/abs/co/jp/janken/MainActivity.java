@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,22 +22,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void onButtonGu(View view){
+    //じゃんけんボタンがどの押されたか
+    public  void onButtonClick(View view) {
         Intent intent = new Intent(this,MainActivity02.class);
-        intent.putExtra("PlayerHand",0);
-        startActivity(intent);
-        finish();
-    }
-
-    public void onButtonChoki(View view){
-        Intent intent = new Intent(this,MainActivity02.class);
-        intent.putExtra("PlayerHand",1);
-        startActivity(intent);
-        finish();
-    }
-    public void onButtonPa(View view){
-        Intent intent = new Intent(this,MainActivity02.class);
-        intent.putExtra("PlayerHand",2);
+        switch (view.getId()) {
+            case R.id.Rock:
+                intent.putExtra("PlayerHand",0);
+                break;
+            case R.id.Scissors:
+                intent.putExtra("PlayerHand",1);
+                break;
+            case R.id.Paper:
+                intent.putExtra("PlayerHand",2);
+                break;
+        }
         startActivity(intent);
         finish();
     }

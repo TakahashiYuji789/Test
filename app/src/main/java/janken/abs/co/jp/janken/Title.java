@@ -51,7 +51,7 @@ public class Title extends AppCompatActivity {
         editor.clear();
         editor.commit();
         TextView battleRecord = findViewById(R.id.BattleHisCom);
-        battleRecord.setText(winNum_+"勝ち"+loseNum_+"負け"+drawNum_+"引き分け");
+        battleRecord.setText("0勝ち"+"0負け"+"0引き分け");
     }
 }
 
