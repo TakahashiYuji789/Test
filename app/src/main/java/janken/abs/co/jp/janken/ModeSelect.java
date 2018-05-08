@@ -72,7 +72,6 @@ public class ModeSelect extends AppCompatActivity {
                     battleMode_.setText("星取り戦");
                     ruleStruct.setText("1.対戦形式は任意で1～10まで対戦出来ます\n2.設定した回戦数の半分以上を満たした場合終了します\n3.設定した回数を達した場合終了します\n4.結果は総合的に判定します");
                     new NumberContainer().battleType_ = true;
-
                }
             }
 
@@ -104,5 +103,3 @@ public class ModeSelect extends AppCompatActivity {
         editor.commit();
     }
 }
-
-

@@ -39,21 +39,23 @@ public class Title extends AppCompatActivity {
     }
 
     public void onClickStart(View veiw) {
-        Intent intent = new Intent(this, ModeSelect.class);
-        startActivity(intent);
-        finish();
-    }
-
-    //保存した値をリセット
-    public void OnClickReset(View view){
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.clear();
-        editor.commit();
-        TextView battleRecord = findViewById(R.id.BattleHisCom);
-        battleRecord.setText("0勝ち"+"0負け"+"0引き分け");
-    }
-}
+        switch (veiw.getId()){
+            case R.id.ResetButton://累計成績のリセットボタン
+                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.clear();
+                editor.commit();
+                TextView battleRecord = findViewById(R.id.BattleHisCom);
+                battleRecord.setText("0勝ち"+"0負け"+"0引き分け");
+                break;
+            case R.id.StartButton://スタートボタン
+                Intent intent = new Intent(this, ModeSelect.class);
+                startActivity(intent);
+                finish();
+                break;
+        }
+      }
+      }
 
 
 

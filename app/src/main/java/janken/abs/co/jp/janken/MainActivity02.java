@@ -77,6 +77,14 @@ public class MainActivity02 extends AppCompatActivity {
     public  void Result(){
         TextView result = findViewById(R.id.Result);
         ImageView comaSan = findViewById(R.id.Coma);
+
+        if( playernum_==enemynum_){
+            result.setText("あいこ");
+            comaSan.setImageResource(R.drawable.draw);
+            container_.setDrawNumber_(1);
+            return;
+        }
+
         if((playernum_==2&&enemynum_==0)||(playernum_==0&&enemynum_==2)){
             if(playernum_>enemynum_){
                 result.setText("勝ち");
@@ -90,13 +98,6 @@ public class MainActivity02 extends AppCompatActivity {
             }
             return;
         }
-        if( playernum_==enemynum_){
-            result.setText("あいこ");
-            comaSan.setImageResource(R.drawable.draw);
-            container_.setDrawNumber_(1);
-            return;
-        }
-
           if(playernum_<enemynum_){
             result.setText("勝ち");
             comaSan.setImageResource(R.drawable.win);
