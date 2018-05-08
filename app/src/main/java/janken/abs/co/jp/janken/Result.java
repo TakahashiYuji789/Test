@@ -50,7 +50,6 @@ public class Result extends AppCompatActivity {
         } else {
             image_.setImageResource(R.drawable.draw_maked);
         }
-
     }
 
     public void onButtonTitle(View view){
@@ -67,6 +66,5 @@ public class Result extends AppCompatActivity {
         editor.putInt("Draw",pref.getInt("TDraw",0)+container.getDrawNumber_());
         editor.apply();
         editor.commit();
-
     }
 }

@@ -31,5 +31,4 @@ public class MiddleResult extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-
 }

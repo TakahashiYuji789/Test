@@ -2,6 +2,7 @@ package janken.abs.co.jp.janken;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.Image;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,18 +20,30 @@ public class MainActivity02 extends AppCompatActivity {
 
     int enemynum_;
     int playernum_;
-    int playerNumber,enemyNumber;
      NumberContainer container_ = new NumberContainer();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main02);
         Intent intent = getIntent();
-        container_.setCountBattle_(1);
-        playernum_ = intent.getIntExtra("PlayerHand",0);
 
-        EnemyHandImage();
-        PlayerHandImage();
+        //ランダム作成
+        long seed = System.currentTimeMillis();
+        Random rnd = new Random(seed);
+
+        //バトル回数を呼び出す
+        container_.setCountBattle_(1);
+
+        //プレイヤー情報
+         playernum_ = intent.getIntExtra("PlayerHand",0);
+        ImageView playerhand = findViewById(R.id.PlayerHand);
+        PictureHand(playerhand,playernum_);
+
+        //敵の情報
+        ImageView enemyhand = findViewById(R.id.EnemyHand);
+        enemynum_ = rnd.nextInt(3);
+        PictureHand(enemyhand,enemynum_);
+
         Result();
     }
     public void onClick(View view){
@@ -44,43 +57,19 @@ public class MainActivity02 extends AppCompatActivity {
     }
         finish();
     }
-    //敵の手の画像変更
-    public void  EnemyHandImage(){
-        //ランダム作成
-        long seed = System.currentTimeMillis();
-        Random rnd = new Random(seed);
-        ImageView enemyhand = findViewById(R.id.EnemyHand);
-        enemynum_ = rnd.nextInt(3);
-    switch (enemynum_){
-        case Rock://0
-            enemyhand.setImageResource(R.drawable.j_gu02);
-            enemyNumber = 0;
-            break;
-        case Scissors://1
-            enemyhand.setImageResource(R.drawable.j_ch02);
-          enemyNumber= 1;
-            break;
-        case Paper://2
-            enemyhand.setImageResource(R.drawable.j_pa02);
-            enemyNumber = 2;
-            break;}
-    }
-    //プレイヤーの手の画像変更
-    public  void  PlayerHandImage(){
-        ImageView playerhand = findViewById(R.id.PlayerHand);
-        switch (playernum_){
-        case Rock://0
-            playerhand.setImageResource(R.drawable.j_gu02);
-            playerNumber = 0;
-            break;
-        case Scissors://1
-            playerhand.setImageResource(R.drawable.j_ch02);
-            playerNumber = 1;
-            break;
-        case Paper://2
-            playerhand.setImageResource(R.drawable.j_pa02);
-            playerNumber = 2;
-            break;
+
+    //画像変換
+    public  void PictureHand(ImageView imageView,int num){
+        switch (num) {
+            case Rock://0
+                imageView.setImageResource(R.drawable.j_gu02);
+                break;
+            case Scissors://1
+                imageView.setImageResource(R.drawable.j_ch02);
+                break;
+            case Paper://2
+                imageView.setImageResource(R.drawable.j_pa02);
+                break;
         }
     }
 
@@ -119,5 +108,4 @@ public class MainActivity02 extends AppCompatActivity {
             container_.setLoseNumber_(1);
         }
     }
-
 }

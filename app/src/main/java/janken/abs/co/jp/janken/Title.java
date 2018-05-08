@@ -29,9 +29,9 @@ public class Title extends AppCompatActivity {
         setContentView(R.layout.title);
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = preferences.edit();
-        int winNum_ = preferences.getInt("Win",0);
-        int loseNum_= preferences.getInt("Lose",0);
-        int drawNum_= preferences.getInt("Draw",0);
+        winNum_ = preferences.getInt("Win",0);
+        loseNum_= preferences.getInt("Lose",0);
+        drawNum_= preferences.getInt("Draw",0);
 
 
         TextView battleRecord = findViewById(R.id.BattleHisCom);
@@ -53,7 +53,6 @@ public class Title extends AppCompatActivity {
         TextView battleRecord = findViewById(R.id.BattleHisCom);
         battleRecord.setText(winNum_+"勝ち"+loseNum_+"負け"+drawNum_+"引き分け");
     }
-
 }
 
 

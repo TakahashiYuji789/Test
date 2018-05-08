@@ -6,8 +6,6 @@ public class NumberContainer {
     private static int loseNumber_;
     private static int drawNumber_;
     private static int countBattle_;
-    public  static int playerNum[];
-    public  static int enemyNum[];
     public  static boolean battleType_;
     //初期化
     public  void Initialize(){
