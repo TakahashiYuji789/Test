@@ -103,7 +103,6 @@ public class ModeSelect extends AppCompatActivity {
         editor.apply();
         editor.commit();
     }
-
 }
 
 
