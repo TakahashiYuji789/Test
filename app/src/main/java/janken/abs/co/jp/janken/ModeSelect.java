@@ -74,16 +74,11 @@ public class ModeSelect extends AppCompatActivity {
                     new NumberContainer().battleType_ = true;
                }
             }
-
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
+            public void onStartTrackingTouch(SeekBar seekBar) {}
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-            }
-        });    }
+            public void onStopTrackingTouch(SeekBar seekBar) {}});
+    }
 
     public void  onClickGame(View veiw){
         Intent intent = new Intent(this,MainActivity.class);
