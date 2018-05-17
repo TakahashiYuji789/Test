@@ -56,6 +56,7 @@ public class MainActivity02 extends AppCompatActivity {
         finish();
     }
 
+
     //画像変換
     public  void PictureHand(ImageView imageView,int num){
         switch (num) {

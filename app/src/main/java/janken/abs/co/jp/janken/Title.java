@@ -52,5 +52,17 @@ public class Title extends AppCompatActivity {
                 startActivity(intent);
                 finish();
                 break; }
+        Intent intent = new Intent(this, ModeSelect.class);
+        startActivity(intent);
+    }
+
+    public void OnClickReset(View view){
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.clear();
+        editor.commit();
+        TextView battleRecord = findViewById(R.id.BattleHisCom);
+        battleRecord.setText(winNum_+"勝ち"+loseNum_+"負け"+drawNum_+"引き分け");
+
     }
 }

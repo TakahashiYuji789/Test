@@ -54,7 +54,6 @@ public class Result extends AppCompatActivity {
     public void onButtonTitle(View view){
         Intent intent = new Intent(this,Title.class);
         startActivity(intent);
-        finish();
     }
         //値を保存
     public void   SaveResult(){

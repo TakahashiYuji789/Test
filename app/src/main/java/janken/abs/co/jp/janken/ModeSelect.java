@@ -81,7 +81,6 @@ public class ModeSelect extends AppCompatActivity {
             new NumberContainer().setBattleNumber_(battleNum_);
         stopper_ = false;
         startActivity(intent);
-        finish();
     }
 
     //累計成績の表示の一時的な保管

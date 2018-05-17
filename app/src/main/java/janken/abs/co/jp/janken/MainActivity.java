@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     //じゃんけんボタンがどの押されたか
     public  void onButtonClick(View view) {
         Intent intent = new Intent(this,MainActivity02.class);
+
         switch (view.getId()) {
             case R.id.Rock:
                 intent.putExtra("PlayerHand",0);
@@ -36,7 +37,17 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("PlayerHand",2);
                 break;
         }
+        intent.putExtra("PlayerHand",0);
         startActivity(intent);
-        finish();
+    }
+    public void onButtonChoki(View view){
+        Intent intent = new Intent(this,MainActivity02.class);
+        intent.putExtra("PlayerHand",1);
+        startActivity(intent);
+    }
+    public void onButtonPa(View view){
+        Intent intent = new Intent(this,MainActivity02.class);
+        intent.putExtra("PlayerHand",2);
+        startActivity(intent);
     }
 }
