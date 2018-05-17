@@ -33,9 +33,8 @@
         android:id="@+id/WinCount00"
         android:layout_width="256dp"
         android:layout_height="56dp"
-        android:layout_alignParentTop="true"
+        android:layout_above="@+id/DrawCount00"
         android:layout_alignStart="@+id/Title02"
-        android:layout_marginTop="252dp"
         android:text="勝った数：X"
         android:textSize="36sp" />
 
@@ -45,7 +44,7 @@
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/Title02"
-        android:layout_marginBottom="148dp"
+        android:layout_marginBottom="119dp"
         android:text="引き分け数：X"
         android:textSize="36sp" />
 

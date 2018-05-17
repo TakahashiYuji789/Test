@@ -38,9 +38,8 @@
         android:id="@+id/BattleHisCom"
         android:layout_width="326dp"
         android:layout_height="68dp"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/ResetButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="182dp"
         android:gravity="center"
         android:text="X勝ちX負けX引き分け"
         android:textSize="29sp" />

@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity02" >
+
     <ImageView
         android:id="@+id/Coma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="145dp"
+        android:layout_height="178dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/win"
+        android:background="@drawable/lose"
         android:scaleType="fitCenter" />
 
     <TextView
@@ -26,7 +27,7 @@
     <ImageView
         android:id="@+id/EnemyHand"
         android:layout_width="101dp"
-        android:layout_height="92dp"
+        android:layout_height="76dp"
         android:layout_below="@+id/Coma"
         android:layout_centerHorizontal="true"
         android:scaleType="fitCenter" />
